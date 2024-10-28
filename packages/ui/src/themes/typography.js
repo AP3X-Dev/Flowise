@@ -5,6 +5,8 @@
  * @param {JsonObject} theme Theme customization object
  */
 export default function themeTypography(theme) {
+    const borderRadius = theme?.customization?.borderRadius || 4; // Ensure borderRadius is defined
+
     return {
         fontFamily: '"Courier New", Courier, monospace', // Monospaced font
         h1: {
@@ -12,36 +14,28 @@ export default function themeTypography(theme) {
             fontWeight: 700,
             color: '#00FF00',
             textShadow: '0 0 2px #00FF00', // Reduced shadow
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '1.75rem',
-            },
+            // Removed responsive typography for stability
         },
         h2: {
             fontSize: '1.5rem',
             fontWeight: 700,
             color: '#00FF00',
             textShadow: '0 0 2px #00FF00', // Reduced shadow
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '1.25rem',
-            },
+            // Removed responsive typography for stability
         },
         h3: {
             fontSize: '1.25rem',
             fontWeight: 600,
             color: '#00FF00',
             textShadow: '0 0 2px #00FF00', // Reduced shadow
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '1rem',
-            },
+            // Removed responsive typography for stability
         },
         h4: {
             fontSize: '1rem',
             fontWeight: 600,
             color: '#00FF00',
             textShadow: '0 0 2px #00FF00', // Reduced shadow
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '0.875rem',
-            },
+            // Removed responsive typography for stability
         },
         h5: {
             fontSize: '0.875rem',
@@ -73,9 +67,6 @@ export default function themeTypography(theme) {
             lineHeight: '1.334em',
             color: '#00FF00',
             textShadow: '0 0 1px #00FF00', // Reduced shadow
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '0.75rem',
-            },
         },
         body2: {
             fontSize: '0.75rem',
@@ -126,7 +117,7 @@ export default function themeTypography(theme) {
             padding: '20px',
             marginTop: '75px',
             marginRight: '20px',
-            borderRadius: `${theme?.customization?.borderRadius || 4}px`,
+            borderRadius: `${borderRadius}px`,
             color: '#00FF00',
             textShadow: '0 0 1px #00FF00', // Reduced shadow
         },
