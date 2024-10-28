@@ -1,31 +1,34 @@
 // Flowise/packages/ui/themes/palette.js
 
 /**
- * Color palette for Matrix-themed UI
+ * Color palette for Matrix-themed UI with adjusted dark grey background and updated green
  * @param {JsonObject} theme Theme customization object
  */
 export default function themePalette(theme) {
+    const darkGrey = '#121212'; // Dark grey background
+    const green = '#12E385'; // Updated green color
+
     return {
         mode: 'dark', // Ensure dark mode is active
         transparent: '#00000000',
         common: {
-            black: '#000000',
-            dark: '#00FF00', // Neon green
+            black: darkGrey,
+            dark: green, // Updated to new green
         },
         primary: {
-            light: '#00CC00',
-            main: '#00FF00', // Neon green
-            dark: '#009900',
-            contrastText: '#000000',
-            200: '#66FF66',
-            800: '#003300',
+            light: '#0FC573', // Slightly darker green
+            main: green, // Updated green
+            dark: '#0BA15E', // Darker shade for primary.dark
+            contrastText: darkGrey, // Dark grey for contrast
+            200: '#1AE5A3', // Light variant
+            800: '#0B8F5E', // Dark variant
         },
         secondary: {
             light: '#004D00',
             main: '#006600',
             dark: '#003300',
             contrastText: '#FFFFFF',
-            200: '#00CC00',
+            200: '#10C572', // Slightly darker green
             800: '#001100',
         },
         error: {
@@ -56,58 +59,58 @@ export default function themePalette(theme) {
             800: '#1B5E20',
         },
         grey: {
-            50: '#000000',
-            100: '#001100',
-            200: '#002200',
-            300: '#003300',
-            500: '#004D00',
-            600: '#005500',
-            700: '#006600',
-            900: '#00FF00',
+            50: '#121212', // Dark grey instead of black
+            100: '#1a1a1a',
+            200: '#2b2b2b',
+            300: '#3c3c3c',
+            500: '#4d4d4d',
+            600: '#5e5e5e',
+            700: '#6f6f6f',
+            900: green, // Updated to new green
         },
         dark: {
             light: '#004D00',
             main: '#003300',
             dark: '#001100',
-            800: '#000000',
-            900: '#000000',
+            800: darkGrey, // Dark grey
+            900: darkGrey, // Dark grey
         },
         text: {
-            primary: '#00FF00',
-            secondary: '#00CC00',
-            dark: '#009900',
+            primary: green,
+            secondary: '#10C572', // Slightly darker green
+            dark: '#0BA15E', // Darker green
             hint: '#006600',
         },
         background: {
-            paper: '#000000', // Black backgrounds
-            default: '#000000',
+            paper: darkGrey, // Dark grey backgrounds
+            default: darkGrey,
         },
         card: {
-            main: '#000000',
+            main: darkGrey,
             light: '#001100',
             hover: '#002200',
         },
         asyncSelect: {
-            main: '#00FF00',
+            main: green,
         },
         timeMessage: {
-            main: '#00CC00',
+            main: '#10C572', // Slightly darker green
         },
         canvasHeader: {
-            deployLight: '#00CC00',
-            deployDark: '#009900',
-            saveLight: '#00CC00',
-            saveDark: '#009900',
-            settingsLight: '#00FF00',
-            settingsDark: '#00CC00',
+            deployLight: '#10C572', // Slightly darker green
+            deployDark: '#0BA15E', // Darker green
+            saveLight: '#10C572', // Slightly darker green
+            saveDark: '#0BA15E', // Darker green
+            settingsLight: green,
+            settingsDark: '#10C572', // Slightly darker green
         },
         codeEditor: {
-            main: '#000000',
+            main: darkGrey,
         },
         nodeToolTip: {
-            background: '#000000',
-            color: 'rgba(0, 255, 0, 0.87)', // Neon green text
+            background: darkGrey,
+            color: 'rgba(18, 227, 133, 0.87)', // Updated green with RGBA
         },
-        divider: '#00FF00',
+        divider: green,
     };
 }
