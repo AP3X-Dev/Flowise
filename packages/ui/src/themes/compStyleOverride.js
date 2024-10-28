@@ -1,240 +1,285 @@
+// Flowise/packages/ui/themes/componentStyleOverride.js
+
 export default function componentStyleOverrides(theme) {
-    const bgColor = theme.colors?.grey50
+    const bgColor = '#000000'; // Black background
+
     return {
         MuiCssBaseline: {
             styleOverrides: {
                 body: {
+                    backgroundColor: bgColor, // Black background
+                    color: '#00FF00', // Neon green text
                     scrollbarWidth: 'thin',
-                    scrollbarColor: theme?.customization?.isDarkMode
-                        ? `${theme.colors?.grey500} ${theme.colors?.darkPrimaryMain}`
-                        : `${theme.colors?.grey300} ${theme.paper}`,
+                    scrollbarColor: '#00FF00 #000000',
                     '&::-webkit-scrollbar, & *::-webkit-scrollbar': {
                         width: 12,
                         height: 12,
-                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimaryMain : theme.paper
+                        backgroundColor: '#000000',
                     },
                     '&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb': {
                         borderRadius: 8,
-                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.grey500 : theme.colors?.grey300,
+                        backgroundColor: '#00FF00',
                         minHeight: 24,
-                        border: `3px solid ${theme?.customization?.isDarkMode ? theme.colors?.darkPrimaryMain : theme.paper}`
-                    },
-                    '&::-webkit-scrollbar-thumb:focus, & *::-webkit-scrollbar-thumb:focus': {
-                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimary200 : theme.colors?.grey500
-                    },
-                    '&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active': {
-                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimary200 : theme.colors?.grey500
+                        border: '3px solid #000000',
                     },
                     '&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover': {
-                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimary200 : theme.colors?.grey500
+                        backgroundColor: '#00CC00',
+                    },
+                    '&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active': {
+                        backgroundColor: '#009900',
                     },
                     '&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner': {
-                        backgroundColor: theme?.customization?.isDarkMode ? theme.colors?.darkPrimaryMain : theme.paper
-                    }
-                }
-            }
+                        backgroundColor: '#000000',
+                    },
+                },
+            },
         },
         MuiButton: {
             styleOverrides: {
                 root: {
                     fontWeight: 500,
-                    borderRadius: '4px'
-                }
-            }
+                    borderRadius: '4px',
+                    color: '#00FF00',
+                    border: '1px solid #00FF00',
+                    backgroundColor: 'transparent',
+                    '&:hover': {
+                        backgroundColor: '#003300',
+                        borderColor: '#00CC00',
+                    },
+                },
+            },
         },
         MuiSvgIcon: {
             styleOverrides: {
                 root: {
-                    color: theme?.customization?.isDarkMode ? theme.colors?.paper : 'inherit',
-                    background: theme?.customization?.isDarkMode ? theme.colors?.darkPrimaryLight : 'inherit'
-                }
-            }
+                    color: '#00FF00',
+                    textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
+                },
+            },
         },
         MuiPaper: {
             defaultProps: {
-                elevation: 0
+                elevation: 0,
             },
             styleOverrides: {
                 root: {
-                    backgroundImage: 'none'
+                    backgroundColor: '#000000', // Black paper background
+                    color: '#00FF00',
                 },
                 rounded: {
-                    borderRadius: `${theme?.customization?.borderRadius}px`
-                }
-            }
+                    borderRadius: `${theme?.customization?.borderRadius}px`,
+                },
+            },
         },
         MuiCardHeader: {
             styleOverrides: {
                 root: {
-                    color: theme.colors?.textDark,
-                    padding: '24px'
+                    color: '#00FF00',
+                    padding: '24px',
+                    backgroundColor: '#001100', // Dark greenish background for headers
                 },
                 title: {
-                    fontSize: '1.125rem'
-                }
-            }
+                    fontSize: '1.125rem',
+                    fontWeight: 600,
+                    textShadow: '0 0 5px #00FF00',
+                },
+            },
         },
         MuiCardContent: {
             styleOverrides: {
                 root: {
-                    padding: '24px'
-                }
-            }
+                    padding: '24px',
+                    backgroundColor: '#000000',
+                    color: '#00FF00',
+                },
+            },
         },
         MuiCardActions: {
             styleOverrides: {
                 root: {
-                    padding: '24px'
-                }
-            }
+                    padding: '24px',
+                    backgroundColor: '#001100',
+                },
+            },
         },
         MuiListItemButton: {
             styleOverrides: {
                 root: {
-                    color: theme.darkTextPrimary,
+                    color: '#00FF00',
                     paddingTop: '10px',
                     paddingBottom: '10px',
                     '&.Mui-selected': {
-                        color: theme.menuSelected,
-                        backgroundColor: theme.menuSelectedBack,
+                        color: '#00CC00',
+                        backgroundColor: '#002200',
                         '&:hover': {
-                            backgroundColor: theme.menuSelectedBack
+                            backgroundColor: '#002200',
                         },
                         '& .MuiListItemIcon-root': {
-                            color: theme.menuSelected
-                        }
+                            color: '#00CC00',
+                        },
                     },
                     '&:hover': {
-                        backgroundColor: theme.menuSelectedBack,
-                        color: theme.menuSelected,
+                        backgroundColor: '#001100',
+                        color: '#00CC00',
                         '& .MuiListItemIcon-root': {
-                            color: theme.menuSelected
-                        }
-                    }
-                }
-            }
+                            color: '#00CC00',
+                        },
+                    },
+                },
+            },
         },
         MuiListItemIcon: {
             styleOverrides: {
                 root: {
-                    color: theme.darkTextPrimary,
-                    minWidth: '36px'
-                }
-            }
+                    color: '#00FF00',
+                    minWidth: '36px',
+                },
+            },
         },
         MuiListItemText: {
             styleOverrides: {
                 primary: {
-                    color: theme.textDark
-                }
-            }
+                    color: '#00FF00',
+                    textShadow: '0 0 3px #00FF00',
+                },
+            },
         },
         MuiInputBase: {
             styleOverrides: {
                 input: {
-                    color: theme.textDark,
+                    color: '#00FF00',
+                    fontFamily: '"Courier New", Courier, monospace',
                     '&::placeholder': {
-                        color: theme.darkTextSecondary,
-                        fontSize: '0.875rem'
+                        color: '#00CC00',
+                        fontSize: '0.875rem',
+                        opacity: 0.7,
                     },
                     '&.Mui-disabled': {
-                        WebkitTextFillColor: theme?.customization?.isDarkMode ? theme.colors?.grey500 : theme.darkTextSecondary
-                    }
-                }
-            }
+                        WebkitTextFillColor: '#006600',
+                        opacity: 0.5,
+                    },
+                },
+            },
         },
         MuiOutlinedInput: {
             styleOverrides: {
                 root: {
-                    background: theme?.customization?.isDarkMode ? theme.colors?.darkPrimary800 : bgColor,
+                    background: '#000000',
                     borderRadius: `${theme?.customization?.borderRadius}px`,
                     '& .MuiOutlinedInput-notchedOutline': {
-                        borderColor: theme.colors?.grey400
+                        borderColor: '#00FF00',
                     },
-                    '&:hover $notchedOutline': {
-                        borderColor: theme.colors?.primaryLight
+                    '&:hover .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#00CC00',
+                    },
+                    '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                        borderColor: '#00CC00',
+                        borderWidth: '2px',
                     },
                     '&.MuiInputBase-multiline': {
-                        padding: 1
-                    }
+                        padding: 1,
+                    },
                 },
                 input: {
                     fontWeight: 500,
-                    background: theme?.customization?.isDarkMode ? theme.colors?.darkPrimary800 : bgColor,
+                    background: '#000000',
                     padding: '15.5px 14px',
                     borderRadius: `${theme?.customization?.borderRadius}px`,
+                    fontFamily: '"Courier New", Courier, monospace',
                     '&.MuiInputBase-inputSizeSmall': {
                         padding: '10px 14px',
                         '&.MuiInputBase-inputAdornedStart': {
-                            paddingLeft: 0
-                        }
-                    }
+                            paddingLeft: 0,
+                        },
+                    },
                 },
                 inputAdornedStart: {
-                    paddingLeft: 4
+                    paddingLeft: 4,
                 },
                 notchedOutline: {
-                    borderRadius: `${theme?.customization?.borderRadius}px`
-                }
-            }
+                    borderRadius: `${theme?.customization?.borderRadius}px`,
+                },
+            },
         },
         MuiSlider: {
             styleOverrides: {
                 root: {
+                    color: '#00FF00',
                     '&.Mui-disabled': {
-                        color: theme.colors?.grey300
-                    }
+                        color: '#006600',
+                    },
                 },
                 mark: {
-                    backgroundColor: theme.paper,
-                    width: '4px'
+                    backgroundColor: '#00FF00',
+                    width: '4px',
                 },
                 valueLabel: {
-                    color: theme?.colors?.primaryLight
-                }
-            }
+                    color: '#00FF00',
+                    backgroundColor: '#000000',
+                },
+            },
         },
         MuiDivider: {
             styleOverrides: {
                 root: {
-                    borderColor: theme.divider,
-                    opacity: 1
-                }
-            }
+                    borderColor: '#00FF00',
+                    opacity: 1,
+                },
+            },
         },
         MuiAvatar: {
             styleOverrides: {
                 root: {
-                    color: theme.colors?.primaryDark,
-                    background: theme.colors?.primary200
-                }
-            }
+                    color: '#00FF00',
+                    background: '#003300',
+                },
+            },
         },
         MuiChip: {
             styleOverrides: {
                 root: {
+                    backgroundColor: '#001100',
+                    color: '#00FF00',
                     '&.MuiChip-deletable .MuiChip-deleteIcon': {
-                        color: 'inherit'
-                    }
-                }
-            }
+                        color: '#00CC00',
+                    },
+                },
+            },
         },
         MuiTooltip: {
             styleOverrides: {
                 tooltip: {
-                    color: theme?.customization?.isDarkMode ? theme.colors?.paper : theme.paper,
-                    background: theme.colors?.grey700
-                }
-            }
+                    color: '#000000',
+                    backgroundColor: '#00FF00',
+                    boxShadow: '0 0 10px #00FF00',
+                },
+            },
         },
         MuiAutocomplete: {
             styleOverrides: {
                 option: {
                     '&:hover': {
-                        background: theme?.customization?.isDarkMode ? '#233345 !important' : ''
-                    }
-                }
-            }
-        }
-    }
+                        background: '#001100 !important',
+                        color: '#00CC00',
+                    },
+                    '&.Mui-selected': {
+                        backgroundColor: '#002200 !important',
+                        color: '#00FF00',
+                        '&:hover': {
+                            backgroundColor: '#002200 !important',
+                        },
+                    },
+                },
+            },
+        },
+        MuiTypography: {
+            styleOverrides: {
+                root: {
+                    color: '#00FF00',
+                    textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
+                },
+            },
+        },
+        // Add more component overrides as needed
+    };
 }
