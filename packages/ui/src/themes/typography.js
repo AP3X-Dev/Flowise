@@ -1,69 +1,85 @@
-/**
- * Typography used in theme
- * @param {JsonObject} theme theme customization object
- */
+// Flowise/packages/ui/themes/typography.js
 
+/**
+ * Typography settings for Matrix-themed UI
+ * @param {JsonObject} theme Theme customization object
+ */
 export default function themeTypography(theme) {
     return {
-        fontFamily: theme?.customization?.fontFamily,
-        h6: {
-            fontWeight: 500,
-            color: theme.heading,
-            fontSize: '0.75rem'
-        },
-        h5: {
-            fontSize: '0.875rem',
-            color: theme.heading,
-            fontWeight: 500
-        },
-        h4: {
-            fontSize: '1rem',
-            color: theme.heading,
-            fontWeight: 600
-        },
-        h3: {
-            fontSize: '1.25rem',
-            color: theme.heading,
-            fontWeight: 600
+        fontFamily: '"Courier New", Courier, monospace', // Monospaced font
+        h1: {
+            fontSize: '2.125rem',
+            fontWeight: 700,
+            color: '#00FF00',
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
         },
         h2: {
             fontSize: '1.5rem',
-            color: theme.heading,
-            fontWeight: 700
+            fontWeight: 700,
+            color: '#00FF00',
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
         },
-        h1: {
-            fontSize: '2.125rem',
-            color: theme.heading,
-            fontWeight: 700
+        h3: {
+            fontSize: '1.25rem',
+            fontWeight: 600,
+            color: '#00FF00',
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
+        },
+        h4: {
+            fontSize: '1rem',
+            fontWeight: 600,
+            color: '#00FF00',
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
+        },
+        h5: {
+            fontSize: '0.875rem',
+            fontWeight: 500,
+            color: '#00FF00',
+            textShadow: '0 0 3px #00FF00',
+        },
+        h6: {
+            fontSize: '0.75rem',
+            fontWeight: 500,
+            color: '#00FF00',
+            textShadow: '0 0 3px #00FF00',
         },
         subtitle1: {
             fontSize: '0.875rem',
             fontWeight: 500,
-            color: theme.textDark
+            color: '#00FF00',
+            textShadow: '0 0 2px #00FF00',
         },
         subtitle2: {
             fontSize: '0.75rem',
             fontWeight: 400,
-            color: theme.darkTextSecondary
-        },
-        caption: {
-            fontSize: '0.75rem',
-            color: theme.darkTextSecondary,
-            fontWeight: 400
+            color: '#00CC00',
+            textShadow: '0 0 2px #00CC00',
         },
         body1: {
             fontSize: '0.875rem',
             fontWeight: 400,
-            lineHeight: '1.334em'
+            lineHeight: '1.334em',
+            color: '#00FF00',
+            textShadow: '0 0 2px #00FF00',
         },
         body2: {
-            letterSpacing: '0em',
+            fontSize: '0.75rem',
             fontWeight: 400,
             lineHeight: '1.5em',
-            color: theme.darkTextPrimary
+            color: '#00CC00',
+            textShadow: '0 0 2px #00CC00',
         },
         button: {
-            textTransform: 'capitalize'
+            textTransform: 'capitalize',
+            fontWeight: 500,
+            color: '#00FF00',
+            textShadow: '0 0 3px #00FF00',
+        },
+        caption: {
+            fontSize: '0.75rem',
+            fontWeight: 400,
+            color: '#00CC00',
+            textShadow: '0 0 2px #00CC00',
         },
         customInput: {
             marginTop: 1,
@@ -71,63 +87,68 @@ export default function themeTypography(theme) {
             '& > label': {
                 top: 23,
                 left: 0,
-                color: theme.grey500,
+                color: '#00CC00',
                 '&[data-shrink="false"]': {
-                    top: 5
-                }
+                    top: 5,
+                },
             },
             '& > div > input': {
-                padding: '30.5px 14px 11.5px !important'
+                padding: '30.5px 14px 11.5px !important',
+                fontFamily: '"Courier New", Courier, monospace',
             },
             '& legend': {
-                display: 'none'
+                display: 'none',
             },
             '& fieldset': {
-                top: 0
-            }
+                top: 0,
+            },
         },
         mainContent: {
-            backgroundColor: theme.background,
+            backgroundColor: '#000000',
             width: '100%',
             minHeight: 'calc(100vh - 75px)',
             flexGrow: 1,
             padding: '20px',
             marginTop: '75px',
             marginRight: '20px',
-            borderRadius: `${theme?.customization?.borderRadius}px`
+            borderRadius: `${theme?.customization?.borderRadius}px`,
+            color: '#00FF00',
+            textShadow: '0 0 2px #00FF00',
         },
         menuCaption: {
             fontSize: '0.875rem',
             fontWeight: 500,
-            color: theme.heading,
+            color: '#00FF00',
             padding: '6px',
             textTransform: 'capitalize',
-            marginTop: '10px'
+            marginTop: '10px',
+            textShadow: '0 0 2px #00FF00',
         },
         subMenuCaption: {
             fontSize: '0.6875rem',
             fontWeight: 500,
-            color: theme.darkTextSecondary,
-            textTransform: 'capitalize'
+            color: '#00CC00',
+            textTransform: 'capitalize',
+            textShadow: '0 0 2px #00CC00',
         },
         commonAvatar: {
             cursor: 'pointer',
-            borderRadius: '8px'
+            borderRadius: '8px',
         },
         smallAvatar: {
             width: '22px',
             height: '22px',
-            fontSize: '1rem'
+            fontSize: '1rem',
         },
         mediumAvatar: {
             width: '34px',
             height: '34px',
-            fontSize: '1.2rem'
+            fontSize: '1.2rem',
         },
         largeAvatar: {
             width: '44px',
             height: '44px',
-            fontSize: '1.5rem'
-        }
-    }
+            fontSize: '1.5rem',
+        },
+    };
 }
