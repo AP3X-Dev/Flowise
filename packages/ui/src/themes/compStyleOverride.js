@@ -2,7 +2,6 @@
 
 export default function componentStyleOverrides(theme) {
     const bgColor = '#000000'; // Black background
-    const borderRadius = theme?.customization?.borderRadius || 4; // Default to 4px if not defined
 
     return {
         MuiCssBaseline: {
@@ -47,7 +46,6 @@ export default function componentStyleOverrides(theme) {
                         backgroundColor: '#003300',
                         borderColor: '#00CC00',
                     },
-                    // Removed animation for blinking to reduce distraction
                 },
             },
         },
@@ -55,7 +53,7 @@ export default function componentStyleOverrides(theme) {
             styleOverrides: {
                 root: {
                     color: '#00FF00',
-                    // Removed textShadow to enhance readability
+                    textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
                 },
             },
         },
@@ -69,7 +67,7 @@ export default function componentStyleOverrides(theme) {
                     color: '#00FF00',
                 },
                 rounded: {
-                    borderRadius: `${borderRadius}px`,
+                    borderRadius: `${theme?.customization?.borderRadius}px`,
                 },
             },
         },
@@ -83,7 +81,7 @@ export default function componentStyleOverrides(theme) {
                 title: {
                     fontSize: '1.125rem',
                     fontWeight: 600,
-                    // Removed textShadow to enhance readability
+                    textShadow: '0 0 5px #00FF00',
                 },
             },
         },
@@ -142,7 +140,7 @@ export default function componentStyleOverrides(theme) {
             styleOverrides: {
                 primary: {
                     color: '#00FF00',
-                    // Removed textShadow to enhance readability
+                    textShadow: '0 0 3px #00FF00',
                 },
             },
         },
@@ -167,7 +165,7 @@ export default function componentStyleOverrides(theme) {
             styleOverrides: {
                 root: {
                     background: '#000000',
-                    borderRadius: `${borderRadius}px`,
+                    borderRadius: `${theme?.customization?.borderRadius}px`,
                     '& .MuiOutlinedInput-notchedOutline': {
                         borderColor: '#00FF00',
                     },
@@ -186,7 +184,7 @@ export default function componentStyleOverrides(theme) {
                     fontWeight: 500,
                     background: '#000000',
                     padding: '15.5px 14px',
-                    borderRadius: `${borderRadius}px`,
+                    borderRadius: `${theme?.customization?.borderRadius}px`,
                     fontFamily: '"Courier New", Courier, monospace',
                     '&.MuiInputBase-inputSizeSmall': {
                         padding: '10px 14px',
@@ -199,7 +197,7 @@ export default function componentStyleOverrides(theme) {
                     paddingLeft: 4,
                 },
                 notchedOutline: {
-                    borderRadius: `${borderRadius}px`,
+                    borderRadius: `${theme?.customization?.borderRadius}px`,
                 },
             },
         },
@@ -278,7 +276,7 @@ export default function componentStyleOverrides(theme) {
             styleOverrides: {
                 root: {
                     color: '#00FF00',
-                    // Removed textShadow to enhance readability
+                    textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
                 },
             },
         },
