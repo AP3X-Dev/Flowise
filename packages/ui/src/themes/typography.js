@@ -11,75 +11,90 @@ export default function themeTypography(theme) {
             fontSize: '2.125rem',
             fontWeight: 700,
             color: '#00FF00',
-            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
+            textShadow: '0 0 2px #00FF00', // Reduced shadow
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '1.75rem',
+            },
         },
         h2: {
             fontSize: '1.5rem',
             fontWeight: 700,
             color: '#00FF00',
-            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
+            textShadow: '0 0 2px #00FF00', // Reduced shadow
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '1.25rem',
+            },
         },
         h3: {
             fontSize: '1.25rem',
             fontWeight: 600,
             color: '#00FF00',
-            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
+            textShadow: '0 0 2px #00FF00', // Reduced shadow
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '1rem',
+            },
         },
         h4: {
             fontSize: '1rem',
             fontWeight: 600,
             color: '#00FF00',
-            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
+            textShadow: '0 0 2px #00FF00', // Reduced shadow
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '0.875rem',
+            },
         },
         h5: {
             fontSize: '0.875rem',
             fontWeight: 500,
             color: '#00FF00',
-            textShadow: '0 0 3px #00FF00',
+            textShadow: '0 0 1px #00FF00', // Reduced shadow
         },
         h6: {
             fontSize: '0.75rem',
             fontWeight: 500,
             color: '#00FF00',
-            textShadow: '0 0 3px #00FF00',
+            textShadow: '0 0 1px #00FF00', // Reduced shadow
         },
         subtitle1: {
             fontSize: '0.875rem',
             fontWeight: 500,
             color: '#00FF00',
-            textShadow: '0 0 2px #00FF00',
+            textShadow: '0 0 1px #00FF00', // Reduced shadow
         },
         subtitle2: {
             fontSize: '0.75rem',
             fontWeight: 400,
             color: '#00CC00',
-            textShadow: '0 0 2px #00CC00',
+            textShadow: '0 0 1px #00CC00', // Reduced shadow
         },
         body1: {
             fontSize: '0.875rem',
             fontWeight: 400,
             lineHeight: '1.334em',
             color: '#00FF00',
-            textShadow: '0 0 2px #00FF00',
+            textShadow: '0 0 1px #00FF00', // Reduced shadow
+            [theme.breakpoints.down('sm')]: {
+                fontSize: '0.75rem',
+            },
         },
         body2: {
             fontSize: '0.75rem',
             fontWeight: 400,
             lineHeight: '1.5em',
             color: '#00CC00',
-            textShadow: '0 0 2px #00CC00',
+            textShadow: '0 0 1px #00CC00', // Reduced shadow
         },
         button: {
             textTransform: 'capitalize',
             fontWeight: 500,
             color: '#00FF00',
-            textShadow: '0 0 3px #00FF00',
+            textShadow: '0 0 1px #00FF00', // Reduced shadow
         },
         caption: {
             fontSize: '0.75rem',
             fontWeight: 400,
             color: '#00CC00',
-            textShadow: '0 0 2px #00CC00',
+            textShadow: '0 0 1px #00CC00', // Reduced shadow
         },
         customInput: {
             marginTop: 1,
@@ -111,9 +126,9 @@ export default function themeTypography(theme) {
             padding: '20px',
             marginTop: '75px',
             marginRight: '20px',
-            borderRadius: `${theme?.customization?.borderRadius}px`,
+            borderRadius: `${theme?.customization?.borderRadius || 4}px`,
             color: '#00FF00',
-            textShadow: '0 0 2px #00FF00',
+            textShadow: '0 0 1px #00FF00', // Reduced shadow
         },
         menuCaption: {
             fontSize: '0.875rem',
@@ -122,14 +137,14 @@ export default function themeTypography(theme) {
             padding: '6px',
             textTransform: 'capitalize',
             marginTop: '10px',
-            textShadow: '0 0 2px #00FF00',
+            textShadow: '0 0 1px #00FF00', // Reduced shadow
         },
         subMenuCaption: {
             fontSize: '0.6875rem',
             fontWeight: 500,
             color: '#00CC00',
             textTransform: 'capitalize',
-            textShadow: '0 0 2px #00CC00',
+            textShadow: '0 0 1px #00CC00', // Reduced shadow
         },
         commonAvatar: {
             cursor: 'pointer',
