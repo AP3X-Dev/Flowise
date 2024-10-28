@@ -47,7 +47,6 @@ export default function componentStyleOverrides(theme) {
                         backgroundColor: '#003300',
                         borderColor: '#00CC00',
                     },
-                    // Removed animation for blinking to reduce distraction
                 },
             },
         },
