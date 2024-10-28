@@ -11,90 +11,75 @@ export default function themeTypography(theme) {
             fontSize: '2.125rem',
             fontWeight: 700,
             color: '#00FF00',
-            // Removed textShadow to enhance readability
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '1.75rem',
-            },
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
         },
         h2: {
             fontSize: '1.5rem',
             fontWeight: 700,
             color: '#00FF00',
-            // Removed textShadow to enhance readability
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '1.25rem',
-            },
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
         },
         h3: {
             fontSize: '1.25rem',
             fontWeight: 600,
             color: '#00FF00',
-            // Removed textShadow to enhance readability
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '1rem',
-            },
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
         },
         h4: {
             fontSize: '1rem',
             fontWeight: 600,
             color: '#00FF00',
-            // Removed textShadow to enhance readability
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '0.875rem',
-            },
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
         },
         h5: {
             fontSize: '0.875rem',
             fontWeight: 500,
             color: '#00FF00',
-            // Removed textShadow to enhance readability
+            textShadow: '0 0 3px #00FF00',
         },
         h6: {
             fontSize: '0.75rem',
             fontWeight: 500,
             color: '#00FF00',
-            // Removed textShadow to enhance readability
+            textShadow: '0 0 3px #00FF00',
         },
         subtitle1: {
             fontSize: '0.875rem',
             fontWeight: 500,
             color: '#00FF00',
-            // Removed textShadow to enhance readability
+            textShadow: '0 0 2px #00FF00',
         },
         subtitle2: {
             fontSize: '0.75rem',
             fontWeight: 400,
             color: '#00CC00',
-            // Removed textShadow to enhance readability
+            textShadow: '0 0 2px #00CC00',
         },
         body1: {
             fontSize: '0.875rem',
             fontWeight: 400,
             lineHeight: '1.334em',
             color: '#00FF00',
-            // Removed textShadow to enhance readability
-            [theme.breakpoints.down('sm')]: {
-                fontSize: '0.75rem',
-            },
+            textShadow: '0 0 2px #00FF00',
         },
         body2: {
             fontSize: '0.75rem',
             fontWeight: 400,
             lineHeight: '1.5em',
             color: '#00CC00',
-            // Removed textShadow to enhance readability
+            textShadow: '0 0 2px #00CC00',
         },
         button: {
             textTransform: 'capitalize',
             fontWeight: 500,
             color: '#00FF00',
-            // Removed textShadow to enhance readability
+            textShadow: '0 0 3px #00FF00',
         },
         caption: {
             fontSize: '0.75rem',
             fontWeight: 400,
             color: '#00CC00',
-            // Removed textShadow to enhance readability
+            textShadow: '0 0 2px #00CC00',
         },
         customInput: {
             marginTop: 1,
@@ -126,9 +111,9 @@ export default function themeTypography(theme) {
             padding: '20px',
             marginTop: '75px',
             marginRight: '20px',
-            borderRadius: `${theme?.customization?.borderRadius || 4}px`,
+            borderRadius: `${theme?.customization?.borderRadius}px`,
             color: '#00FF00',
-            // Removed textShadow to enhance readability
+            textShadow: '0 0 2px #00FF00',
         },
         menuCaption: {
             fontSize: '0.875rem',
@@ -137,14 +122,14 @@ export default function themeTypography(theme) {
             padding: '6px',
             textTransform: 'capitalize',
             marginTop: '10px',
-            // Removed textShadow to enhance readability
+            textShadow: '0 0 2px #00FF00',
         },
         subMenuCaption: {
             fontSize: '0.6875rem',
             fontWeight: 500,
             color: '#00CC00',
             textTransform: 'capitalize',
-            // Removed textShadow to enhance readability
+            textShadow: '0 0 2px #00CC00',
         },
         commonAvatar: {
             cursor: 'pointer',
