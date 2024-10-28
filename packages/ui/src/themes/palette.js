@@ -1,108 +1,113 @@
+// Flowise/packages/ui/themes/palette.js
+
 /**
- * Color intention that you want to used in your theme
+ * Color palette for Matrix-themed UI
  * @param {JsonObject} theme Theme customization object
  */
-
 export default function themePalette(theme) {
     return {
-        mode: theme?.customization?.navType,
-        transparent: theme.colors?.transparent,
+        mode: 'dark', // Ensure dark mode is active
+        transparent: '#00000000',
         common: {
-            black: theme.colors?.darkPaper,
-            dark: theme.colors?.darkPrimaryMain
+            black: '#000000',
+            dark: '#00FF00', // Neon green
         },
         primary: {
-            light: theme.customization.isDarkMode ? theme.colors?.darkPrimaryLight : theme.colors?.primaryLight,
-            main: theme.colors?.primaryMain,
-            dark: theme.customization.isDarkMode ? theme.colors?.darkPrimaryDark : theme.colors?.primaryDark,
-            200: theme.customization.isDarkMode ? theme.colors?.darkPrimary200 : theme.colors?.primary200,
-            800: theme.customization.isDarkMode ? theme.colors?.darkPrimary800 : theme.colors?.primary800
+            light: '#00CC00',
+            main: '#00FF00', // Neon green
+            dark: '#009900',
+            contrastText: '#000000',
+            200: '#66FF66',
+            800: '#003300',
         },
         secondary: {
-            light: theme.customization.isDarkMode ? theme.colors?.darkSecondaryLight : theme.colors?.secondaryLight,
-            main: theme.customization.isDarkMode ? theme.colors?.darkSecondaryMain : theme.colors?.secondaryMain,
-            dark: theme.customization.isDarkMode ? theme.colors?.darkSecondaryDark : theme.colors?.secondaryDark,
-            200: theme.colors?.secondary200,
-            800: theme.colors?.secondary800
+            light: '#004D00',
+            main: '#006600',
+            dark: '#003300',
+            contrastText: '#FFFFFF',
+            200: '#00CC00',
+            800: '#001100',
         },
         error: {
-            light: theme.colors?.errorLight,
-            main: theme.colors?.errorMain,
-            dark: theme.colors?.errorDark
+            light: '#FF6666',
+            main: '#FF0000',
+            dark: '#990000',
         },
         orange: {
-            light: theme.colors?.orangeLight,
-            main: theme.colors?.orangeMain,
-            dark: theme.colors?.orangeDark
+            light: '#FFB74D',
+            main: '#FF9800',
+            dark: '#F57C00',
         },
         teal: {
-            light: theme.colors?.tealLight,
-            main: theme.colors?.tealMain,
-            dark: theme.colors?.tealDark
+            light: '#4DB6AC',
+            main: '#009688',
+            dark: '#00796B',
         },
         warning: {
-            light: theme.colors?.warningLight,
-            main: theme.colors?.warningMain,
-            dark: theme.colors?.warningDark
+            light: '#FFCC80',
+            main: '#FF9800',
+            dark: '#F57C00',
         },
         success: {
-            light: theme.colors?.successLight,
-            200: theme.colors?.success200,
-            main: theme.colors?.successMain,
-            dark: theme.colors?.successDark
+            light: '#81C784',
+            main: '#4CAF50',
+            dark: '#388E3C',
+            200: '#66FF66',
+            800: '#1B5E20',
         },
         grey: {
-            50: theme.colors?.grey50,
-            100: theme.colors?.grey100,
-            200: theme.colors?.grey200,
-            300: theme.colors?.grey300,
-            500: theme.darkTextSecondary,
-            600: theme.heading,
-            700: theme.darkTextPrimary,
-            900: theme.textDark
+            50: '#000000',
+            100: '#001100',
+            200: '#002200',
+            300: '#003300',
+            500: '#004D00',
+            600: '#005500',
+            700: '#006600',
+            900: '#00FF00',
         },
         dark: {
-            light: theme.colors?.darkTextPrimary,
-            main: theme.colors?.darkLevel1,
-            dark: theme.colors?.darkLevel2,
-            800: theme.colors?.darkBackground,
-            900: theme.colors?.darkPaper
+            light: '#004D00',
+            main: '#003300',
+            dark: '#001100',
+            800: '#000000',
+            900: '#000000',
         },
         text: {
-            primary: theme.darkTextPrimary,
-            secondary: theme.darkTextSecondary,
-            dark: theme.textDark,
-            hint: theme.colors?.grey100
+            primary: '#00FF00',
+            secondary: '#00CC00',
+            dark: '#009900',
+            hint: '#006600',
         },
         background: {
-            paper: theme.paper,
-            default: theme.backgroundDefault
+            paper: '#000000', // Black backgrounds
+            default: '#000000',
         },
         card: {
-            main: theme.customization.isDarkMode ? theme.colors?.darkPrimaryMain : theme.colors?.paper,
-            light: theme.customization.isDarkMode ? theme.colors?.darkPrimary200 : theme.colors?.paper,
-            hover: theme.customization.isDarkMode ? theme.colors?.darkPrimary800 : theme.colors?.paper
+            main: '#000000',
+            light: '#001100',
+            hover: '#002200',
         },
         asyncSelect: {
-            main: theme.customization.isDarkMode ? theme.colors?.darkPrimary800 : theme.colors?.grey50
+            main: '#00FF00',
         },
         timeMessage: {
-            main: theme.customization.isDarkMode ? theme.colors?.darkLevel2 : theme.colors?.grey200
+            main: '#00CC00',
         },
         canvasHeader: {
-            deployLight: theme.colors?.primaryLight,
-            deployDark: theme.colors?.primaryDark,
-            saveLight: theme.colors?.secondaryLight,
-            saveDark: theme.colors?.secondaryDark,
-            settingsLight: theme.colors?.grey300,
-            settingsDark: theme.colors?.grey700
+            deployLight: '#00CC00',
+            deployDark: '#009900',
+            saveLight: '#00CC00',
+            saveDark: '#009900',
+            settingsLight: '#00FF00',
+            settingsDark: '#00CC00',
         },
         codeEditor: {
-            main: theme.customization.isDarkMode ? theme.colors?.darkPrimary800 : theme.colors?.primaryLight
+            main: '#000000',
         },
         nodeToolTip: {
-            background: theme.customization.isDarkMode ? theme.colors?.darkPrimary800 : theme.colors?.paper,
-            color: theme.customization.isDarkMode ? theme.colors?.paper : 'rgba(0, 0, 0, 0.87)'
-        }
-    }
+            background: '#000000',
+            color: 'rgba(0, 255, 0, 0.87)', // Neon green text
+        },
+        divider: '#00FF00',
+    };
 }
