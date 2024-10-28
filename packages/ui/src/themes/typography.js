@@ -1,88 +1,85 @@
 // Flowise/packages/ui/themes/typography.js
 
 /**
- * Typography settings for Matrix-themed UI with adjusted dark grey background and updated green
+ * Typography settings for Matrix-themed UI
  * @param {JsonObject} theme Theme customization object
  */
 export default function themeTypography(theme) {
-    const darkGrey = '#121212'; // Dark grey background
-    const green = '#12E385'; // Updated green color
-
     return {
         fontFamily: '"Courier New", Courier, monospace', // Monospaced font
         h1: {
             fontSize: '2.125rem',
             fontWeight: 700,
-            color: green,
-            textShadow: '0 0 3px #12E385, 0 0 6px #12E385', // Reduced glow
+            color: '#00FF00',
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
         },
         h2: {
             fontSize: '1.5rem',
             fontWeight: 700,
-            color: green,
-            textShadow: '0 0 3px #12E385, 0 0 6px #12E385', // Reduced glow
+            color: '#00FF00',
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
         },
         h3: {
             fontSize: '1.25rem',
             fontWeight: 600,
-            color: green,
-            textShadow: '0 0 3px #12E385, 0 0 6px #12E385', // Reduced glow
+            color: '#00FF00',
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
         },
         h4: {
             fontSize: '1rem',
             fontWeight: 600,
-            color: green,
-            textShadow: '0 0 3px #12E385, 0 0 6px #12E385', // Reduced glow
+            color: '#00FF00',
+            textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
         },
         h5: {
             fontSize: '0.875rem',
             fontWeight: 500,
-            color: green,
-            textShadow: '0 0 2px #12E385', // Reduced glow
+            color: '#00FF00',
+            textShadow: '0 0 3px #00FF00',
         },
         h6: {
             fontSize: '0.75rem',
             fontWeight: 500,
-            color: green,
-            textShadow: '0 0 2px #12E385', // Reduced glow
+            color: '#00FF00',
+            textShadow: '0 0 3px #00FF00',
         },
         subtitle1: {
             fontSize: '0.875rem',
             fontWeight: 500,
-            color: green,
-            textShadow: '0 0 1px #12E385', // Reduced glow
+            color: '#00FF00',
+            textShadow: '0 0 2px #00FF00',
         },
         subtitle2: {
             fontSize: '0.75rem',
             fontWeight: 400,
-            color: '#10C572', // Slightly darker green
-            textShadow: '0 0 1px #10C572', // Reduced glow
+            color: '#00CC00',
+            textShadow: '0 0 2px #00CC00',
         },
         body1: {
             fontSize: '0.875rem',
             fontWeight: 400,
             lineHeight: '1.334em',
-            color: green,
-            textShadow: '0 0 1px #12E385', // Reduced glow
+            color: '#00FF00',
+            textShadow: '0 0 2px #00FF00',
         },
         body2: {
             fontSize: '0.75rem',
             fontWeight: 400,
             lineHeight: '1.5em',
-            color: '#10C572', // Slightly darker green
-            textShadow: '0 0 1px #10C572', // Reduced glow
+            color: '#00CC00',
+            textShadow: '0 0 2px #00CC00',
         },
         button: {
             textTransform: 'capitalize',
             fontWeight: 500,
-            color: green,
-            textShadow: '0 0 2px #12E385', // Reduced glow
+            color: '#00FF00',
+            textShadow: '0 0 3px #00FF00',
         },
         caption: {
             fontSize: '0.75rem',
             fontWeight: 400,
-            color: '#10C572', // Slightly darker green
-            textShadow: '0 0 1px #10C572', // Reduced glow
+            color: '#00CC00',
+            textShadow: '0 0 2px #00CC00',
         },
         customInput: {
             marginTop: 1,
@@ -90,7 +87,7 @@ export default function themeTypography(theme) {
             '& > label': {
                 top: 23,
                 left: 0,
-                color: '#10C572', // Slightly darker green
+                color: '#00CC00',
                 '&[data-shrink="false"]': {
                     top: 5,
                 },
@@ -107,7 +104,7 @@ export default function themeTypography(theme) {
             },
         },
         mainContent: {
-            backgroundColor: darkGrey,
+            backgroundColor: '#000000',
             width: '100%',
             minHeight: 'calc(100vh - 75px)',
             flexGrow: 1,
@@ -115,24 +112,24 @@ export default function themeTypography(theme) {
             marginTop: '75px',
             marginRight: '20px',
             borderRadius: `${theme?.customization?.borderRadius}px`,
-            color: green,
-            textShadow: '0 0 1px #12E385', // Reduced glow
+            color: '#00FF00',
+            textShadow: '0 0 2px #00FF00',
         },
         menuCaption: {
             fontSize: '0.875rem',
             fontWeight: 500,
-            color: green,
+            color: '#00FF00',
             padding: '6px',
             textTransform: 'capitalize',
             marginTop: '10px',
-            textShadow: '0 0 1px #12E385', // Reduced glow
+            textShadow: '0 0 2px #00FF00',
         },
         subMenuCaption: {
             fontSize: '0.6875rem',
             fontWeight: 500,
-            color: '#10C572', // Slightly darker green
+            color: '#00CC00',
             textTransform: 'capitalize',
-            textShadow: '0 0 1px #10C572', // Reduced glow
+            textShadow: '0 0 2px #00CC00',
         },
         commonAvatar: {
             cursor: 'pointer',
