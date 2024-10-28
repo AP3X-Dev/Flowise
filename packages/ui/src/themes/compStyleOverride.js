@@ -1,35 +1,36 @@
 // Flowise/packages/ui/themes/componentStyleOverride.js
 
 export default function componentStyleOverrides(theme) {
-    const bgColor = '#000000'; // Black background
+    const darkGrey = '#121212'; // Dark grey background
+    const green = '#12E385'; // Updated green color
 
     return {
         MuiCssBaseline: {
             styleOverrides: {
                 body: {
-                    backgroundColor: bgColor, // Black background
-                    color: '#00FF00', // Neon green text
+                    backgroundColor: darkGrey, // Dark grey background
+                    color: green, // Updated green text
                     scrollbarWidth: 'thin',
-                    scrollbarColor: '#00FF00 #000000',
+                    scrollbarColor: `${green} ${darkGrey}`,
                     '&::-webkit-scrollbar, & *::-webkit-scrollbar': {
                         width: 12,
                         height: 12,
-                        backgroundColor: '#000000',
+                        backgroundColor: darkGrey,
                     },
                     '&::-webkit-scrollbar-thumb, & *::-webkit-scrollbar-thumb': {
                         borderRadius: 8,
-                        backgroundColor: '#00FF00',
+                        backgroundColor: green,
                         minHeight: 24,
-                        border: '3px solid #000000',
+                        border: `3px solid ${darkGrey}`,
                     },
                     '&::-webkit-scrollbar-thumb:hover, & *::-webkit-scrollbar-thumb:hover': {
-                        backgroundColor: '#00CC00',
+                        backgroundColor: '#10C572', // Slightly darker shade for hover
                     },
                     '&::-webkit-scrollbar-thumb:active, & *::-webkit-scrollbar-thumb:active': {
-                        backgroundColor: '#009900',
+                        backgroundColor: '#0EB65A', // Even darker for active state
                     },
                     '&::-webkit-scrollbar-corner, & *::-webkit-scrollbar-corner': {
-                        backgroundColor: '#000000',
+                        backgroundColor: darkGrey,
                     },
                 },
             },
@@ -39,12 +40,12 @@ export default function componentStyleOverrides(theme) {
                 root: {
                     fontWeight: 500,
                     borderRadius: '4px',
-                    color: '#00FF00',
-                    border: '1px solid #00FF00',
+                    color: green,
+                    border: `1px solid ${green}`,
                     backgroundColor: 'transparent',
                     '&:hover': {
-                        backgroundColor: '#003300',
-                        borderColor: '#00CC00',
+                        backgroundColor: '#002215', // Darker background on hover
+                        borderColor: '#10C572', // Slightly darker green on hover
                     },
                 },
             },
@@ -52,8 +53,8 @@ export default function componentStyleOverrides(theme) {
         MuiSvgIcon: {
             styleOverrides: {
                 root: {
-                    color: '#00FF00',
-                    textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
+                    color: green,
+                    textShadow: '0 0 3px #12E385, 0 0 6px #12E385', // Reduced glow
                 },
             },
         },
@@ -63,8 +64,8 @@ export default function componentStyleOverrides(theme) {
             },
             styleOverrides: {
                 root: {
-                    backgroundColor: '#000000', // Black paper background
-                    color: '#00FF00',
+                    backgroundColor: darkGrey, // Dark grey paper background
+                    color: green,
                 },
                 rounded: {
                     borderRadius: `${theme?.customization?.borderRadius}px`,
@@ -74,14 +75,14 @@ export default function componentStyleOverrides(theme) {
         MuiCardHeader: {
             styleOverrides: {
                 root: {
-                    color: '#00FF00',
+                    color: green,
                     padding: '24px',
                     backgroundColor: '#001100', // Dark greenish background for headers
                 },
                 title: {
                     fontSize: '1.125rem',
                     fontWeight: 600,
-                    textShadow: '0 0 5px #00FF00',
+                    textShadow: '0 0 3px #12E385', // Reduced glow
                 },
             },
         },
@@ -89,8 +90,8 @@ export default function componentStyleOverrides(theme) {
             styleOverrides: {
                 root: {
                     padding: '24px',
-                    backgroundColor: '#000000',
-                    color: '#00FF00',
+                    backgroundColor: darkGrey,
+                    color: green,
                 },
             },
         },
@@ -105,24 +106,24 @@ export default function componentStyleOverrides(theme) {
         MuiListItemButton: {
             styleOverrides: {
                 root: {
-                    color: '#00FF00',
+                    color: green,
                     paddingTop: '10px',
                     paddingBottom: '10px',
                     '&.Mui-selected': {
-                        color: '#00CC00',
+                        color: '#10C572', // Slightly darker green for selected state
                         backgroundColor: '#002200',
                         '&:hover': {
                             backgroundColor: '#002200',
                         },
                         '& .MuiListItemIcon-root': {
-                            color: '#00CC00',
+                            color: '#10C572',
                         },
                     },
                     '&:hover': {
                         backgroundColor: '#001100',
-                        color: '#00CC00',
+                        color: '#10C572',
                         '& .MuiListItemIcon-root': {
-                            color: '#00CC00',
+                            color: '#10C572',
                         },
                     },
                 },
@@ -131,7 +132,7 @@ export default function componentStyleOverrides(theme) {
         MuiListItemIcon: {
             styleOverrides: {
                 root: {
-                    color: '#00FF00',
+                    color: green,
                     minWidth: '36px',
                 },
             },
@@ -139,23 +140,23 @@ export default function componentStyleOverrides(theme) {
         MuiListItemText: {
             styleOverrides: {
                 primary: {
-                    color: '#00FF00',
-                    textShadow: '0 0 3px #00FF00',
+                    color: green,
+                    textShadow: '0 0 2px #12E385', // Reduced glow
                 },
             },
         },
         MuiInputBase: {
             styleOverrides: {
                 input: {
-                    color: '#00FF00',
+                    color: green,
                     fontFamily: '"Courier New", Courier, monospace',
                     '&::placeholder': {
-                        color: '#00CC00',
+                        color: '#10C572', // Slightly darker green for placeholder
                         fontSize: '0.875rem',
                         opacity: 0.7,
                     },
                     '&.Mui-disabled': {
-                        WebkitTextFillColor: '#006600',
+                        WebkitTextFillColor: '#0EB65A', // Darker green for disabled state
                         opacity: 0.5,
                     },
                 },
@@ -164,16 +165,16 @@ export default function componentStyleOverrides(theme) {
         MuiOutlinedInput: {
             styleOverrides: {
                 root: {
-                    background: '#000000',
+                    background: darkGrey,
                     borderRadius: `${theme?.customization?.borderRadius}px`,
                     '& .MuiOutlinedInput-notchedOutline': {
-                        borderColor: '#00FF00',
+                        borderColor: green,
                     },
                     '&:hover .MuiOutlinedInput-notchedOutline': {
-                        borderColor: '#00CC00',
+                        borderColor: '#10C572', // Slightly darker green on hover
                     },
                     '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                        borderColor: '#00CC00',
+                        borderColor: '#10C572', // Slightly darker green on focus
                         borderWidth: '2px',
                     },
                     '&.MuiInputBase-multiline': {
@@ -182,7 +183,7 @@ export default function componentStyleOverrides(theme) {
                 },
                 input: {
                     fontWeight: 500,
-                    background: '#000000',
+                    background: darkGrey,
                     padding: '15.5px 14px',
                     borderRadius: `${theme?.customization?.borderRadius}px`,
                     fontFamily: '"Courier New", Courier, monospace',
@@ -204,25 +205,25 @@ export default function componentStyleOverrides(theme) {
         MuiSlider: {
             styleOverrides: {
                 root: {
-                    color: '#00FF00',
+                    color: green,
                     '&.Mui-disabled': {
-                        color: '#006600',
+                        color: '#0EB65A', // Darker green for disabled slider
                     },
                 },
                 mark: {
-                    backgroundColor: '#00FF00',
+                    backgroundColor: green,
                     width: '4px',
                 },
                 valueLabel: {
-                    color: '#00FF00',
-                    backgroundColor: '#000000',
+                    color: green,
+                    backgroundColor: darkGrey,
                 },
             },
         },
         MuiDivider: {
             styleOverrides: {
                 root: {
-                    borderColor: '#00FF00',
+                    borderColor: green,
                     opacity: 1,
                 },
             },
@@ -230,7 +231,7 @@ export default function componentStyleOverrides(theme) {
         MuiAvatar: {
             styleOverrides: {
                 root: {
-                    color: '#00FF00',
+                    color: green,
                     background: '#003300',
                 },
             },
@@ -239,9 +240,9 @@ export default function componentStyleOverrides(theme) {
             styleOverrides: {
                 root: {
                     backgroundColor: '#001100',
-                    color: '#00FF00',
+                    color: green,
                     '&.MuiChip-deletable .MuiChip-deleteIcon': {
-                        color: '#00CC00',
+                        color: '#10C572', // Slightly darker green for delete icon
                     },
                 },
             },
@@ -249,9 +250,9 @@ export default function componentStyleOverrides(theme) {
         MuiTooltip: {
             styleOverrides: {
                 tooltip: {
-                    color: '#000000',
-                    backgroundColor: '#00FF00',
-                    boxShadow: '0 0 10px #00FF00',
+                    color: darkGrey, // Dark grey text for tooltips
+                    backgroundColor: green,
+                    boxShadow: '0 0 5px #12E385', // Reduced glow
                 },
             },
         },
@@ -260,11 +261,11 @@ export default function componentStyleOverrides(theme) {
                 option: {
                     '&:hover': {
                         background: '#001100 !important',
-                        color: '#00CC00',
+                        color: '#10C572',
                     },
                     '&.Mui-selected': {
                         backgroundColor: '#002200 !important',
-                        color: '#00FF00',
+                        color: green,
                         '&:hover': {
                             backgroundColor: '#002200 !important',
                         },
@@ -275,8 +276,8 @@ export default function componentStyleOverrides(theme) {
         MuiTypography: {
             styleOverrides: {
                 root: {
-                    color: '#00FF00',
-                    textShadow: '0 0 5px #00FF00, 0 0 10px #00FF00',
+                    color: green,
+                    textShadow: '0 0 3px #12E385, 0 0 6px #12E385', // Reduced glow
                 },
             },
         },
